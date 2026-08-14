@@ -10,7 +10,7 @@ from flask_cors import CORS
 # =====================================================================
 MODELE_PATH = "meilleur_modele_plantes.h5"
 CLASSES_PATH = "classes.txt"
-PORT = 5000
+PORT = int(os.environ.get("PORT", 5000))  # Render impose son propre port via cette variable d'environnement
 HOST = "0.0.0.0"  # écoute sur toutes les interfaces réseau (nécessaire pour Flutter)
 
 # =====================================================================
